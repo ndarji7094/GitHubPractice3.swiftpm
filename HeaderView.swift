@@ -19,6 +19,7 @@ struct HeaderView: View {
                 tasks.append(newTask)
                 enteredString = ""
             }
+            .foregroundColor(.teal)
         }
     }
 }
