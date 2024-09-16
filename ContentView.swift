@@ -2,8 +2,9 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State var tasks: [Task] = [Task(nameOfTask: "Mow"), Task(nameOfTask: "Other task"), Task(nameOfTask: "Feed the dog"), Task(nameOfTask: "Clean the room")]
+    @State var tasks: [Task] = []
     var body: some View {
+        HeaderView(tasks: $tasks)
         List(tasks, id: \.self) { currentTask in
             Text(currentTask.nameOfTask)
         }
